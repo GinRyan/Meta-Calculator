@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:gravity="center"
+android:layout_marginBottom="50dp">
+	<EditText
+		android:focusable="false"
+		
+		android:background="#00000000"
+		android:id="@+id/et_src"
+		android:maxLines="5"
+		android:textSize="15sp"
+		android:textColor="#FFFFFF"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		/>
+	<me.yugy.github.reveallayout.RevealLayout
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:id="@+id/rl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+
+		<View
+			android:layout_height="2dp"
+			android:layout_width="match_parent"
+			android:id="@+id/error"
+			android:gravity="center"
+			android:background="#ff0000"/>
+
+	</me.yugy.github.reveallayout.RevealLayout>
+
+	<TextView
+		android:layout_marginTop="3dp"
+		android:textSize="12sp"
+		android:layout_height="wrap_content"
+		android:textColor="#ff0000"
+		android:layout_width="match_parent"
+		android:id="@+id/info"
+		android:gravity="center"/>
+
+</LinearLayout>
+

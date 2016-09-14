@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:htext="http://schemas.android.com/apk/res-auto"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:gravity="bottom|center">
+
+	<me.yugy.github.reveallayout.RevealLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/diy">
+
+		<RelativeLayout
+			android:id="@+id/mrl"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:gravity="bottom|center"
+			android:background="#8BC34A">
+
+			<GridView
+				android:background="#ffffff"
+				android:id="@+id/gv2"
+				android:layout_width="wrap_content"
+				android:layout_height="280dp"
+				android:numColumns="7"
+				android:stretchMode="columnWidth"
+				android:gravity="center"
+				android:layout_alignParentBottom="true"/>
+
+			<TextView
+				android:background="#ffffff"
+				android:layout_height="30dp"
+				android:id="@+id/tvm"
+				android:layout_width="match_parent"
+				android:layout_above="@id/gv2"/>
+
+			
+			<FrameLayout
+				android:layout_alignTop="@id/tvm"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<include
+					layout="@layout/include_shadow"/>
+
+			</FrameLayout>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_alignParentBottom="true"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:background="#ffc107"
+			android:gravity="bottom|center"
+			>
+			<GridView
+				
+				android:background="#ffffff"
+				android:id="@+id/gv"
+				android:layout_width="wrap_content"
+				android:layout_height="280dp"
+				android:numColumns="7"
+				android:stretchMode="columnWidth"
+				android:gravity="center"
+				android:layout_alignParentBottom="true"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:background="#ffffff"
+				android:layout_height="30dp"
+				android:id="@+id/tv"
+				android:layout_width="match_parent"
+				android:layout_above="@id/gv">
+				<com.rey.material.widget.Button
+					style="@style/LightFlatWaveButtonRippleStyle"
+					android:layout_width="60dp"
+					android:layout_height="match_parent"
+					android:text="删除"
+				/>
+				<com.rey.material.widget.Button
+					style="@style/LightFlatWaveButtonRippleStyle"
+					android:text="清除"
+					android:layout_width="60dp"
+					android:layout_height="match_parent"
+				/>
+				
+			</LinearLayout>
+			<FrameLayout
+				android:id="@+id/fet"
+				android:layout_above="@id/gv"
+				android:layout_marginBottom="10dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<include
+					layout="@layout/edit_text"/>
+
+			</FrameLayout>
+
+			<com.hanks.htextview.HTextView
+				android:layout_above="@id/fet"
+				android:id="@+id/tv_ans"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textIsSelectable="true"
+				htext:animateType="fall"
+				android:textColor="#fff"
+				android:textSize="20sp"/>
+
+			<FrameLayout
+				android:layout_alignTop="@id/tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<include
+					layout="@layout/include_shadow"/>
+
+			</FrameLayout>
+
+		</RelativeLayout>
+
+	</me.yugy.github.reveallayout.RevealLayout>
+	<com.rey.material.widget.FloatingActionButton
+		style="@style/LightFABColor"
+		app:fab_radius="25dp"
+        android:layout_alignParentBottom="true"
+		android:id="@+id/fab"
+		android:onClick="onSwitch"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="280dp"
+	/>
+</RelativeLayout>
+

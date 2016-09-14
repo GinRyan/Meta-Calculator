@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:htext="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="bottom|center"
+	android:background="#8BC34A">
+
+	<com.hanks.htextview.HTextView
+		android:id="@+id/tv_ans"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textIsSelectable="true"
+		htext:animateType="fall"
+		android:textColor="#fff"
+		android:textSize="20sp"/>
+
+	<include
+		layout="@layout/edit_text"/>
+
+	<LinearLayout
+		android:gravity="bottom"
+		android:background="#ffffff"
+		android:layout_height="350dp"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<include
+			layout="@layout/include_shadow"/>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/recyclerView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
